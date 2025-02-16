@@ -12,15 +12,15 @@ class Program
         // Create the scripture library and pick a random scripture
         ScriptureLibrary scriptureLibrary = new ScriptureLibrary();
         Scripture scripture = scriptureLibrary.GetRandomScripture();
-        Reference reference = scripture.GetReference(); // Make sure Scripture has a GetReference() method
+        Reference reference = scripture.GetReference(); 
 
         bool running = true;
 
         while (running && !scripture.IsAllHidden())  // The loop stops when all words are hidden
         {
             Console.Clear();
-            Console.WriteLine(reference.GetDisplayContent()); // Display reference
-            Console.WriteLine(scripture.GetDisplayContent()); // Display scripture
+            Console.WriteLine(reference.GetDisplayContent()); 
+            Console.WriteLine(scripture.GetDisplayContent()); 
 
             Console.WriteLine("\nPress Enter to hide more words or type 'quit' to exit.");
             string input = Console.ReadLine().Trim().ToLower();
