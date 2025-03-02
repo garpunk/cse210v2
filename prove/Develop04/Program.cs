@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Console.WriteLine("Welcome to the Mindfulness Program!");
+
+        
+        SessionManager sessionManager = new SessionManager();
+        sessionManager.Run(); 
     }
 }
