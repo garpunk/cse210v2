@@ -40,10 +40,10 @@ public class SessionManager
             
 
                 case "3":
-                    MindfulnessSession mindfulnessSession = new MindfulnessSession(); // ✅ Create instance
+                    MindfulnessSession mindfulnessSession = new MindfulnessSession(); 
                     mindfulnessSession.Run();
                     break;
-             case "4":
+             case "4": //check out "StretchingSession.cs" for exceeding requirements
                     StretchingSession stretchingSession = new StretchingSession("Stretching & Moving");
                     stretchingSession.Run();
                     break;

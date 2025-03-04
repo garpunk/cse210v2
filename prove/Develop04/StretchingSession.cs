@@ -1,4 +1,4 @@
-public class StretchingSession : Session
+public class StretchingSession : Session //entire subclass is for exceeding requirements.
 {
     private List<string> _stretches = new List<string>
     {
