@@ -10,13 +10,12 @@ public class Lecture : Event
         _capacity = capacity;
     }
 
-    public override string GetFullDetails()
+    public string GetLectureDetails()
     {
-        return GetStandardDetails() +
-               $"Type: Lecture\nSpeaker: {_speaker}\nCapacity: {_capacity} people\n";
+        return GetStandardDetails() + $"\nSpeaker: {_speaker}\nCapacity: {_capacity}";
     }
 
-    public override string GetShortDescription()
+    public string GetShortDescription()
     {
         return $"Lecture: {_title} on {_date}";
     }

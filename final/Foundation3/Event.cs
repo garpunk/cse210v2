@@ -17,16 +17,6 @@ public class Event
 
     public string GetStandardDetails()
     {
-        return $"Event: {_title}\nDescription: {_description}\nDate: {_date} Time: {_time}\nLocation: {_address.GetFullAddress()}\n";
-    }
-
-    public virtual string GetFullDetails()
-    {
-        return GetStandardDetails() + "Type: General Event\n";
-    }
-
-    public virtual string GetShortDescription()
-    {
-        return $"General Event: {_title} on {_date}";
+        return $"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nLocation: {_address.GetFullAddress()}";
     }
 }

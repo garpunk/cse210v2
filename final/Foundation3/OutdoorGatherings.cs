@@ -8,13 +8,12 @@ public class OutdoorGathering : Event
         _weather = weather;
     }
 
-    public override string GetFullDetails()
+    public string GetOutdoorDetails()
     {
-        return GetStandardDetails() +
-               $"Type: Outdoor Gathering\nWeather Forecast: {_weather}\n";
+        return GetStandardDetails() + $"\nWeather Forecast: {_weather}";
     }
 
-    public override string GetShortDescription()
+    public string GetShortDescription()
     {
         return $"Outdoor Gathering: {_title} on {_date}";
     }

@@ -4,48 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create addresses
-        Address address1 = new Address("123 Elm St", "New York", "NY", "USA");
-        Address address2 = new Address("456 Oak Rd", "Los Angeles", "CA", "USA");
-        Address address3 = new Address("789 Pine Ave", "Seattle", "WA", "USA");
+        Address addr1 = new Address("123 Main St", "New York", "NY", "USA");
+        Address addr2 = new Address("456 Elm St", "Toronto", "ON", "Canada");
+        Address addr3 = new Address("789 Park Ave", "Los Angeles", "CA", "USA");
 
-        // Create events
-        Lecture lecture = new Lecture(
-            "Tech Innovation Summit",
-            "A discussion on the future of technology.",
-            "April 10, 2025",
-            "10:00 AM",
-            address1,
-            "Dr. John Smith",
-            150);
+        Lecture lecture = new Lecture("AI in 2025", "A discussion on the future of AI.", "March 20, 2025", "10:00 AM", addr1, "Dr. Jane Smith", 100);
+        Reception reception = new Reception("Networking Event", "Meet industry professionals.", "April 5, 2025", "6:00 PM", addr2, "rsvp@example.com");
+        OutdoorGathering outdoorEvent = new OutdoorGathering("Spring Festival", "Enjoy outdoor activities!", "May 15, 2025", "12:00 PM", addr3, "Sunny and warm");
 
-        Reception reception = new Reception(
-            "Networking Gala",
-            "An evening of networking with industry leaders.",
-            "May 15, 2025",
-            "7:00 PM",
-            address2,
-            "rsvp@eventplanner.com");
-
-        OutdoorGathering outdoorGathering = new OutdoorGathering(
-            "Spring Festival",
-            "Enjoy live music and local food vendors.",
-            "June 20, 2025",
-            "3:00 PM",
-            address3,
-            "Sunny with a high of 75°F");
-
-        // Display event details
-        DisplayEventDetails(lecture);
-        DisplayEventDetails(reception);
-        DisplayEventDetails(outdoorGathering);
-    }
-
-    static void DisplayEventDetails(Event ev)
-    {
-        Console.WriteLine(ev.GetStandardDetails());
-        Console.WriteLine(ev.GetFullDetails());
-        Console.WriteLine(ev.GetShortDescription());
-        Console.WriteLine("--------------------------------------\n");
+        Console.WriteLine(lecture.GetLectureDetails());
+        Console.WriteLine("\n----------------------------\n");
+        Console.WriteLine(reception.GetReceptionDetails());
+        Console.WriteLine("\n----------------------------\n");
+        Console.WriteLine(outdoorEvent.GetOutdoorDetails());
     }
 }
